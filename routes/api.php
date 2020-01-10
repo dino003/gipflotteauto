@@ -20,20 +20,23 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 // route deploiement
 //Route::post('deploy', 'UtilController@deploy');
 //Route::post('deploy_autre', 'UtilController@deploy_autre');
-
-
-Route::post('deploy_autre', function(Request $request){
-    $gitUser = 'dino003';
-    $sender = $request->sender;
-   $branch = $request->ref;
-  // return $sender->login; //pm io
-  //$branch->indexOf('master') > -1
-
-   if( $sender->login === $gitUser){
+Route::post('deploy_autre', function(){
     Artisan::call('git:deploy');
-    exit;
-        }
-   });
+        exit;
+});
+
+// Route::post('deploy_autre', function(Request $request){
+//     $gitUser = 'dino003';
+//     $sender = $request->sender;
+//    $branch = $request->ref;
+//   // return $sender->login; //pm io
+//   //$branch->indexOf('master') > -1
+
+//    if( $sender->login === $gitUser){
+//     Artisan::call('git:deploy');
+//     exit;
+//         }
+//    });
 
 //Route::post('deploy_autre', 'CoutConsomableController@index');
 
