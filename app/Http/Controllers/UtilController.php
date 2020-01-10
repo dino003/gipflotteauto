@@ -33,8 +33,8 @@ class UtilController extends Controller
 
     public function deploy_autre(Request $request){
         $gitUserLogin = 'dino003';
-        // $sender = $request->get('sender');
-        // $branch = $request->get('ref');
+         $sender = $request->get('sender');
+         $branch = $request->get('ref');
 
          $githubPayload = $request->getContent(); 
         // $githubHash = $request->header('X-Hub-Signature');
@@ -45,9 +45,9 @@ class UtilController extends Controller
         // if (hash_equals($githubHash, $localHash)) {
              Artisan::call('git:deploy');
 
-             exit;
+            // exit;
         // }
 
-       // return $githubPayload;
+        return $sender->login;
     }
 }
