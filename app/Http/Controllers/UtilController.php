@@ -30,9 +30,9 @@ class UtilController extends Controller
     // }
 
     public function deploy_autre(Request $request){
-        $gitUser = 'dino003';
-        $sender = $request->body->sender;
-        $branch = $request->body->ref;
+        $gitUserLogin = 'dino003';
+        $sender = $request->sender;
+        $branch = $request->ref;
 
         // $githubPayload = $request->getContent();
         // $githubHash = $request->header('X-Hub-Signature');
