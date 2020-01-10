@@ -30,7 +30,7 @@ Route::post('deploy_autre', function(Request $request){
 //     $sender = $request->sender;
 //    $branch = $request->ref;
   // return $sender->login; //pm io
-  //$branch->indexOf('master') > -1
+  //$branch->indexOf('master') > -1 //
 
 //    if( $sender->login === $gitUser){
     Artisan::call('git:deploy');
