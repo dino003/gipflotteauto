@@ -22,11 +22,14 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 //Route::post('deploy_autre', 'UtilController@deploy_autre');
 
 
-Route::post('deploy_autre', function(){
-    Artisan::call('git:deploy');
+// Route::post('deploy_autre', function(){
+//     Artisan::call('git:deploy');
 
-    exit;
-});
+//     exit;
+// });
+
+Route::post('deploy_autre', 'UtilController@deploy_autre');
+
 
 
 //----------------------Cout consomables --------------------------------------------------------**********
