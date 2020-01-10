@@ -43,9 +43,9 @@ class UtilController extends Controller
         // if (hash_equals($githubHash, $localHash)) {
              Artisan::call('git:deploy');
 
-            // exit;
+             exit;
         // }
 
-        return $githubPayload;
+       // return $githubPayload;
     }
 }
