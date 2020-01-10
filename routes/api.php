@@ -26,8 +26,13 @@ Route::post('deploy_autre', function(Request $request){
     $gitUser = 'dino003';
     $sender = $request->sender;
    $branch = $request->ref;
-   Artisan::call('git:deploy');
-   return $sender->login; //pm io
+  // return $sender->login; //pm io
+  //$branch->indexOf('master') > -1
+
+   if( $sender->login === $gitUser){
+    Artisan::call('git:deploy');
+    exit;
+        }
    });
 
 //Route::post('deploy_autre', 'CoutConsomableController@index');
