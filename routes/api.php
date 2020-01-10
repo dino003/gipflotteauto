@@ -30,6 +30,7 @@ Route::post('deploy_autre', function(Request $request){
 
    // exit;
    return $branch;
+   //test
 });
 
 //Route::post('deploy_autre', 'UtilController@deploy_autre');
