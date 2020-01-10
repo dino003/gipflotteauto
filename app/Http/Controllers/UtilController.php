@@ -32,22 +32,22 @@ class UtilController extends Controller
     // }
 
     public function deploy_autre(Request $request){
-        $gitUserLogin = 'dino003';
-         $sender = $request->get('sender');
-         $branch = $request->get('ref');
+    //     $gitUserLogin = 'dino003';
+    //      $sender = $request->get('sender');
+    //      $branch = $request->get('ref');
 
-         $githubPayload = $request->getContent(); 
-        // $githubHash = $request->header('X-Hub-Signature');
+    //      $githubPayload = $request->getContent(); 
+    //     // $githubHash = $request->header('X-Hub-Signature');
  
-        // $localToken = config('app.deploy_secret');
-       // $localHash = 'sha1=' . hash_hmac('sha1', $githubPayload, $localToken, false);
+    //     // $localToken = config('app.deploy_secret');
+    //    // $localHash = 'sha1=' . hash_hmac('sha1', $githubPayload, $localToken, false);
  
-        // if (hash_equals($githubHash, $localHash)) {
-             Artisan::call('git:deploy');
+    //     // if (hash_equals($githubHash, $localHash)) {
+    //          Artisan::call('git:deploy');
 
-            // exit;
-        // }
+    //         // exit;
+    //     // }
 
-        return $sender->login;
+    //     return $sender->login;
     }
 }
