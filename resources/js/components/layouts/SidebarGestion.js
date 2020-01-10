@@ -51,7 +51,7 @@ const active = {
                             
 
                                   
-                                 
+                                 { param_generaux_modules.reservations == 1 ?
                                 <li>
                                     <NavLink activeStyle={active} exact to="/gestion_du_parc_automobile/gestion-des-reservations-all">
                                         <i className="metismenu-icon pe-7s-home"></i>
@@ -60,7 +60,7 @@ const active = {
                                         <i className="metismenu-state-icon "></i>
                                     </NavLink>
 
-                                </li>
+                                </li> : null }
 
                                 {param_generaux_modules && 
 
@@ -158,6 +158,8 @@ const mapStateToProps = state => {
     return {
         param_generaux_modules: state.param_generaux_modules.items,
         param_generaux_reservation_ordre: state.param_generaux_reservation_ordre.items,
+        param_generaux_modules: state.param_generaux_modules.items,
+
 
     }
   }
