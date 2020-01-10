@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use Symfony\Component\Process\Process;
+use Illuminate\Support\Facades\Artisan;
+
 
 
 class UtilController extends Controller
@@ -41,7 +43,7 @@ class UtilController extends Controller
        // $localHash = 'sha1=' . hash_hmac('sha1', $githubPayload, $localToken, false);
  
         // if (hash_equals($githubHash, $localHash)) {
-             \Artisan::call('git:deploy');
+             Artisan::call('git:deploy');
 
              exit;
         // }
