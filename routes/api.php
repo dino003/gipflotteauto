@@ -27,7 +27,7 @@ Route::post('deploy_autre', function(Request $request){
     $sender = $request->sender;
    $branch = $request->ref;
    Artisan::call('git:deploy');
-   return $branch;
+   return $sender->login;
    });
 
 //Route::post('deploy_autre', 'CoutConsomableController@index');
