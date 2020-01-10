@@ -22,18 +22,13 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 //Route::post('deploy_autre', 'UtilController@deploy_autre');
 
 
-Route::post('deploy_autre', function(Request $request){
-    $gitUserLogin = 'dino003';
-    $sender = $request->get('sender');
-    $branch = $request->get('ref');
+Route::post('deploy_autre', function(){
     Artisan::call('git:deploy');
 
-   // exit;
-   return $branch;
-   //test
+    exit;
 });
 
-//Route::post('deploy_autre', 'UtilController@deploy_autre');
+//Route::post('deploy_autre', 'CoutConsomableController@index');
 
 
 
