@@ -243,14 +243,18 @@ const active = {
 
 
                                 <li>
-                                    {vehiculeSeleted != undefined ?  <NavLink exact activeStyle={active} to="/contrat">
+                                    {vehiculeSeleted != undefined ?  <NavLink exact activeStyle={active}
+                                       to={{
+                                        pathname: `/gestion_du_parc_automobile/parc/contrat_assurance_de_vehicule/${vehiculeSeleted.id}/${vehiculeSeleted.immatriculation}`,
+                                      }}
+                                     >
                                         <i className="metismenu-icon pe-7s-note2"></i>
-                                        Contrats Assurances
+                                        Contrat d'Assurance
                                         <i className="metismenu-state-icon "></i>
 
                                     </NavLink> :  <a disabled title="Le lien est désactivé, veuillez sélectionner un véhicule">
                                         <i className="metismenu-icon pe-7s-note2"></i>
-                                        Contrats Assurances
+                                        Contrat d'Assurance
                                         <i className="metismenu-state-icon "></i>
 
                                     </a> }
